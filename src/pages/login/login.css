@@ -1,0 +1,61 @@
+.login{
+    height: calc(100vh - 0px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("https://www.indiafilings.com/learn/wp-content/uploads/2015/07/Adventure-Travel-Business-e1437168928152.jpg");
+    background-size: cover;
+}
+
+.loginForm{
+    position: relative;
+    margin: 30px;
+    width: 400px;
+    bottom: 5px;
+    left: 300px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.loginForm>label{
+    font-size: 30px;
+}
+
+.loginForm>input{
+    margin: 10px 0;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(160, 160, 160);
+}
+
+.loginForm>input:focus{
+    outline: none;
+}
+
+.button{
+    margin-top: 10px;
+    width: 100px;
+    font-size: 25px;
+    padding: 5px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 15px;
+    border: none;
+}
+
+.name{
+    width: 1000px;
+    margin-bottom: 50px;
+}
+
+.name>h1{
+    font-size: 50px;
+}
+
+.name>p{
+    font-size: 28px;
+}
+
+

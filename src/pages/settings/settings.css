@@ -1,0 +1,89 @@
+.settings{
+    display: flex;
+}
+
+.settingsWrapper{
+    flex: 9;
+    padding: 20px;
+}
+
+.settingsTitle{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.settingsUpdateTitle{
+    font-size: 30px;
+    
+    color: lightcoral;
+}
+
+.settingsDeleteTitle{
+    font-size: 15px;
+    color: red;
+    cursor: pointer;
+}
+
+.settingsForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.settingsPP{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.profilepic{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.profileChangeIcon{
+    position: absolute;
+    top:225px;
+    left: 225px;
+    border-radius: 50%;
+    background-color: rgb(223, 223, 223);
+    padding: 8px;
+    cursor: pointer;
+}
+
+.settingsForm>label{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.settingsForm>input{
+    font-size: 17px;
+    color: grey ;
+    width: 60vh;
+    margin: 10px 0;
+    height: 4vh;
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+
+.settingsForm>input:focus{
+    outline: none;
+}
+
+.settingsButton{
+    padding: 10px;
+    font-size: 18px;
+    width: 140px;
+    border-radius: 10px;
+    border: none;
+    background-color: teal;
+    color: white;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+

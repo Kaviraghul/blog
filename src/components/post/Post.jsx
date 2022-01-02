@@ -1,23 +1,25 @@
-import './post.css'
+import './post.css';
+import {Link} from "react-router-dom";
 
-export default function Post() {
+export default function Post({post}) {
     return (
         <div className='posts'>
-            <img src="https://img.indianautosblog.com/resize/750x-/2021/11/23/royal-enfield-sg650-concept-77e2.jpg" alt="" className="postImg" />
+            {post.photo && (<img src={post.photo} />)}
             <div className="postInfo">
                 <div className="postCats">
-                    <span className="postCat">Music</span>
-                    <span className="postCat">Life</span>
+                    {post.categories.map((c) => (
+                        <span className="postCat">{c.name}</span>
+                    ))}
                 </div>
-                <span className="postTitle">
-                Royal Enfield SG650
-                </span>
+                <Link to = {"/post/${post._id}"}>
+                        <span className="postTitle">
+                        {post.title}
+                        </span>
+                </Link>
                 <hr />
-                <span className="postDate">1 hour ago</span>
+                <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
             </div>
-            <p className="postDesc">
-                   The SG650 Concept is the result of a challenge set to Royal Enfield’s Industrial Design Team by Mark Wells, Chief of Design. At its core, the message underpinning the concept build was about celebrating ‘transition’. The aim, through this challenge, was for the Royal Enfield team to embark on a new creative journey with the SG650 Concept; starting from within Royal Enfield’s classic design sensibilities and then pushing into a whole new era of what the Royal Enfield’s of the future could look like.
-            </p>
+            <p className="postDesc">{post.desc}</p>
         </div>
     )
 }

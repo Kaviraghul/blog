@@ -1,0 +1,49 @@
+.register{
+    height: calc(100vh - 0px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("https://media.timeout.com/images/105770166/image.jpg");
+    background-size: cover;
+}
+
+.registerForm{
+    position: relative;
+    margin: 30px;
+    width: 400px;
+    bottom: 50px;
+    left: 300px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.registerForm>label{
+    font-size: 40px;
+}
+
+.registerForm>input{
+    margin: 10px 0;
+    font-size: 25px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(160, 160, 160);
+}
+
+.registerForm>input:focus{
+    outline: none;
+}
+
+.button{
+    margin-top: 10px;
+    width: 130px;
+    font-size: 25px;
+    padding: 5px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 15px;
+    border: none;
+}
+
+
+
