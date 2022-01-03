@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 export default function Post({post}) {
     return (
         <div className='posts'>
-            {post.photo && (<img src={post.photo} />)}
+            {post.photo && (<img className='postImg' src={post.photo} />)}
             <div className="postInfo">
                 <div className="postCats">
                     {post.categories.map((c) => (

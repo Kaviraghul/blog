@@ -1,5 +1,4 @@
 .post{
-    width: 385px;
     margin: 0px 25px 40px 25px;
 }
 
@@ -28,7 +27,7 @@
 
 .postTitle{
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     margin-top: 15px;
     cursor: pointer;
@@ -53,3 +52,4 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
+

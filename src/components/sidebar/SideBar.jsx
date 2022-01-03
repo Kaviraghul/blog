@@ -5,7 +5,7 @@ export default function SideBar() {
         <div className='sidebar'>
             <div className="sidebarItem">
                 <span className="sidebarTitle">ABOUT ME</span>
-                <img className= "myImg" src="https://media-exp1.licdn.com/dms/image/C5603AQEXqmfQL-1yhA/profile-displayphoto-shrink_800_800/0/1639071686743?e=1646265600&v=beta&t=BSuqErftK1GALvNtXdAL3S-eNWDu9ed1VHwvrRDXUk4" alt="" />
+                <img className= "myImg" src="https://avatars.githubusercontent.com/u/68986366?v=4" alt="" />
                 <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
             </div>
             <div className="sidebarItem">

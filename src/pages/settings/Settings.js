@@ -15,7 +15,7 @@ export default function Settings() {
                 <form className='settingsForm'>
                     <label>Profile Picture</label>
                     <div className='settingsPP'>
-                        <img className='profilepic' src="https://media-exp1.licdn.com/dms/image/C5603AQEXqmfQL-1yhA/profile-displayphoto-shrink_800_800/0/1639071686743?e=1646265600&v=beta&t=BSuqErftK1GALvNtXdAL3S-eNWDu9ed1VHwvrRDXUk4" alt="" />
+                        <img className='profilepic' src="https://avatars.githubusercontent.com/u/68986366?v=4" alt="" />
                         <label htmlFor='inputEditIcon'><i class="profileChangeIcon fas fa-pen"></i></label>
                         <input type= "file" id='inputEditIcon' style={{display:"none"}}></input>
                     </div>
