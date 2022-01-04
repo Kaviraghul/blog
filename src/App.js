@@ -1,5 +1,4 @@
 import Home from "./pages/home/Home";
-import TopBar from "./components/topbar/TopBar";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
 import Settings from "./pages/settings/Settings";
@@ -9,7 +8,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from 'react-router-dom';
 
 
@@ -22,7 +20,7 @@ function App() {
           <Route exact path='/login' element={< Login />}></Route>
           <Route exact path='/register' element={< Register />}></Route>
           <Route exact path='/settings' element={< Settings />}></Route>
-          <Route exact path='/post/:postId' element={< Single />}></Route>
+          <Route exact path='/post/:id' element={< Single />}></Route>
           <Route exact path='/write' element={< Write />}></Route>
       </Routes>
     </Router>

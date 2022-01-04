@@ -1,6 +1,5 @@
 import Header from '../../components/header/Header';
 import Posts from '../../components/posts/Posts';
-import SideBar from '../../components/sidebar/SideBar';
 import './home.css';
 import TopBar from '../../components/topbar/TopBar';
 import axios from "axios";
