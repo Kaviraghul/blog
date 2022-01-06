@@ -1,0 +1,21 @@
+.dropdown{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: rgb(0, 0, 0);
+    
+    margin: 0;
+    padding: 0;
+    
+}
+
+.dropdownlist{
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    list-style: none;
+}
+
+.dropdown li:hover{
+    background: rgb(53, 53, 53);
+}
