@@ -7,12 +7,18 @@
     background-size: cover;
 }
 
+.registrationTitle{
+    font-size: 55px;
+}
+
 .registerForm{
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 5%;
     position: relative;
     margin: 30px;
-    width: 400px;
-    bottom: 50px;
-    left: 300px;
+    width: 530px;
+    left: 100px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -24,26 +30,39 @@
 
 .registerForm>input{
     margin: 10px 0;
-    font-size: 25px;
-    border: none;
-    background-color: transparent;
-    border-bottom: 2px solid rgb(160, 160, 160);
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    border-color: black;
 }
 
-.registerForm>input:focus{
-    outline: none;
-}
 
-.button{
+.buttons{
     margin-top: 10px;
-    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.loginButton{
+    
+    width: 100px;
     font-size: 25px;
     padding: 5px;
     background-color: black;
     color: aliceblue;
     border-radius: 15px;
     border: none;
+    cursor: pointer;
 }
 
-
-
+.registerButton{
+    font-size: 25px;
+    padding: 5px;
+    width: 130px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}

@@ -28,7 +28,8 @@ export default function Registration() {
     return (
         <div className='register'>
             <form className='registerForm' onSubmit={handleSubmit}>
-
+                <span className='registrationTitle'>Registration</span>
+                <div className='divider'></div>
                 <label>Username</label>
                 <input 
                 class="registerTitle"  
@@ -53,14 +54,17 @@ export default function Registration() {
                     onChange={(e) =>{ newPassword(e.target.value)}}
                 />
                 
-                <button className='registerButton' type="submit">Register</button>
-
+                <div className='buttons'>
+                    <button className='registerButton' type="submit">
+                        <Link style={{textDecoration:"none", color:"inherit"}} to='/login'>
+                        Register
+                        </Link>
+                    </button>
+                    <button className='loginButton'>Log in</button>
+                </div>
             </form>
-            <button className='registerLoginButton' type="submit">
-                    <Link className='link' to='/login'>
-                      Login
-                    </Link>
-            </button>
+            
+            
             {error && <span style={{color : "red" , margin:"10px"}}>Something went wrong</span>}
         </div>
     )
