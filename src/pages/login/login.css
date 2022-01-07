@@ -54,6 +54,10 @@
     border: none;
     cursor: pointer;
 }
+.loginButton:disabled{
+    cursor: not-allowed;
+    background-color: rgb(250, 131, 131);
+}
 
 .registerButton{
     font-size: 25px;

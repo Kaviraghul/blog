@@ -9,19 +9,22 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import {useContext} from 'react';
+import { Context } from "./context/Context";
 
 
 function App() {
+  const {user} =  useContext(Context);
   return (
     <>
     <Router>
       <Routes>
           <Route exact path='/' element={< Home />}></Route>
-          <Route exact path='/login' element={< Login />}></Route>
-          <Route exact path='/register' element={< Register />}></Route>
-          <Route exact path='/settings' element={< Settings />}></Route>
-          <Route exact path='/post/:id' element={< Single />}></Route>
-          <Route exact path='/write' element={< Write />}></Route>
+          <Route exact path='/login' element={user ? < Home /> : <Login/>}></Route>
+          <Route exact path='/register' element={user ? < Home /> : <Register/>}></Route>
+          <Route exact path='/settings' element={user ? < Settings /> : <Register/>}></Route>
+          <Route exact path='/post/:id' element={<Single />}></Route>
+          <Route exact path='/write' element={user ? < Write /> : <Register/>}></Route>
       </Routes>
     </Router>
     </>
