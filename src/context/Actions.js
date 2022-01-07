@@ -8,5 +8,5 @@ export const LoginSuccess = (user) => ({
 })
 
 export const LoginFailure = () => ({
-    type:"LOGIN_FAILUR"
+    type:"LOGIN_FAILURE"
 })
