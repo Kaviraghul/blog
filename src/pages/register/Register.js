@@ -4,9 +4,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 export default function Registration() {
-    const [username, newUsername] = useState("");
-    const [email, newEmail] = useState("");
-    const [password, newPassword] = useState("");
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
 
 
@@ -18,10 +18,10 @@ export default function Registration() {
                 username,
                 email,
                 password,
-            });
+            });           
             res.data && window.location.replace('/login');
         }catch(err){
-            setError(true)
+            setError(true);
         }
     }
 
@@ -35,7 +35,7 @@ export default function Registration() {
                 class="registerTitle"  
                 type="text" 
                 placeholder='Enter your username...' 
-                onChange={(e) => {newUsername(e.target.value)}}
+                onChange={e => setUsername(e.target.value)}
                 />
 
                 <label>Email</label>
@@ -43,7 +43,7 @@ export default function Registration() {
                 class="registerTitle"  
                 type="text" 
                 placeholder='Enter your email...' 
-                onChange={(e) => {newEmail(e.target.value)}}
+                onChange={e => setEmail(e.target.value)}
                 />
                 
                 <label>Password</label>
@@ -51,16 +51,14 @@ export default function Registration() {
                     class="registerTitle"  
                     type="password" 
                     placeholder='Enter your password...' 
-                    onChange={(e) =>{ newPassword(e.target.value)}}
+                    onChange={e => setPassword(e.target.value)}
                 />
                 
                 <div className='buttons'>
                     <button className='registerButton' type="submit">
-                        <Link style={{textDecoration:"none", color:"inherit"}} to='/login'>
                         Register
-                        </Link>
                     </button>
-                    <button className='loginButton'>Log in</button>
+                    <button className='loginButton'><Link to="/login" style={{textDecoration:"none" , color:"inherit"}}>Log in</Link></button>
                 </div>
             </form>
             
