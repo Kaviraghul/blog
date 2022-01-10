@@ -1,11 +1,18 @@
 import './topbar.css';
 import { Link } from 'react-router-dom';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import DropDown from '../DropDown/DropDown';
+import { Context } from '../../context/Context';
 
 
 export default function TopBar() {
     const [dropdown, setDropdown] = useState(false);
+    const {user, dispatch} = useContext(Context);
+
+    const handleLogout = () =>{
+        dispatch({type:"LOGOUT"})
+    }
+
     return (
         <>
         <div className = "top" >
@@ -21,15 +28,22 @@ export default function TopBar() {
                          {dropdown && <DropDown />}
                     </li>
                      <li className="topListItem"><Link to="/write" style={{textDecoration:"none", color:"inherit"}}>WRITE</Link></li>
-                     <li className="topListItem"><Link to="/login" style={{textDecoration:"none", color:"inherit"}}>LOGOUT</Link></li>
                  </ul>
                  
              </div> 
              <div className="topRight">
-                 <i className="searchIcon fas fa-search"></i>
-                 <img className="topImage" src="https://scontent.fcjb6-1.fna.fbcdn.net/v/t1.18169-9/14089289_1576152542688931_2648781964389453995_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=174925&_nc_ohc=HdyKNLyu4CkAX8JQCY7&_nc_ht=scontent.fcjb6-1.fna&oh=00_AT8xzDVA32p4I05eMV3Eg2hJA0TPyekGDJx_QE3jLGLUvg&oe=61E563A3" alt="" />   
+                 {user? <div className='topRightMenu'>
+                            <img className="topImage" src={user.profilePic} alt="" />
+                            <li className="topListItem"><Link to="/" style={{textDecoration:"none", color:"inherit"}} onClick={handleLogout}>LOGOUT</Link></li>
+                        </div>: 
+                        <div className='topRightMenu'>
+                            <li className="topListItem"><Link to="/login" style={{textDecoration:"none", color:"inherit"}} >LOGIN</Link></li>
+                            <li className="topListItem"><Link to="/register" style={{textDecoration:"none", color:"inherit"}} >REGISTER</Link></li>
+                        </div> }
              </div>
              
+
+
         </div>
         </>
         

@@ -35,6 +35,7 @@
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    margin-right: 10px;
 }
 
 .topList{
@@ -68,4 +69,10 @@
     color: rgb(252, 252, 252);
     cursor: pointer;
     margin: 15px;
+}
+
+.topRightMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

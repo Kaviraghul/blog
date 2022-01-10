@@ -24,12 +24,12 @@ function App() {
           <Route exact path='/register' element={user ? < Home /> : <Register/>}></Route>
           <Route exact path='/settings' element={user ? < Settings /> : <Register/>}></Route>
           <Route exact path='/post/:id' element={<Single />}></Route>
-          <Route exact path='/write' element={user ? < Write /> : <Register/>}></Route>
+          <Route exact path='/write' element={user ? < Write /> : <Login />}></Route>
       </Routes>
     </Router>
     </>
     
-  );
+  ); 
 }
 
 export default App;
